@@ -47,11 +47,9 @@ class _HomePageState extends State<HomePage> {
                 )
               ],
             ),
-            const SizedBox(
-              height: 2,
-            ),
-            SizedBox(
-              height: 80,
+            Container(
+              margin: const EdgeInsets.only(top: 20),
+              height: 40.0,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
@@ -63,6 +61,70 @@ class _HomePageState extends State<HomePage> {
                   buildChipMethod('healthy', false),
                   buildChipMethod('healthy', false),
                   buildChipMethod('healthy', false),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                      color: Colors.grey.shade100,
+                      width: 1.0,
+                      style: BorderStyle.solid),
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 1.0,
+                      color: Colors.grey.shade300,
+                      spreadRadius: 1.0,
+                    ),
+                  ]),
+              child: Column(
+                children: [
+                  Container(
+                    height: 200,
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('assets/images/food.jpg'),
+                        fit: BoxFit.cover,
+                      ),
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          topRight: Radius.circular(20)),
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(25),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              'title',
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              'subtext',
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
+                        const CircleAvatar(
+                          backgroundColor: Colors.orange,
+                          child: Text(
+                            '4.5',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
