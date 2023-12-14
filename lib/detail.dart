@@ -62,7 +62,7 @@ class _DetailPageState extends State<DetailPage> {
               child: const Text(
                 '4.5',
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.white,
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
@@ -110,17 +110,17 @@ class _DetailPageState extends State<DetailPage> {
                 child: Column(
                   children: [
                     buildItemContainer(
-                        'Vegetable',
+                        'Jollof Rice',
                         'This is a sub text, should break into next line when the text is longer',
-                        'food'),
+                        'jollof1'),
                     buildItemContainer(
-                        'Vegetable',
+                        'Fried Rice',
                         'This is a sub text, should break into next line when the text is longer',
-                        'food'),
+                        'fried'),
                     buildItemContainer(
-                        'Vegetable',
+                        'Chicken',
                         'This is a sub text, should break into next line when the text is longer',
-                        'food'),
+                        'chicken'),
                     buildItemContainer(
                         'Vegetable',
                         'This is a sub text, should break into next line when the text is longer',
@@ -137,12 +137,12 @@ class _DetailPageState extends State<DetailPage> {
 
   Container buildItemContainer(String title, String description, String image) {
     return Container(
-      padding: const EdgeInsets.only(top: 20, left: 25, right: 45),
+      padding: const EdgeInsets.only(top: 20, left: 25, right: 45, bottom: 10),
       child: Row(
         children: [
           Container(
-            height: 100,
-            width: 100,
+            height: 80,
+            width: 80,
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('assets/images/$image.jpg'),
@@ -163,7 +163,7 @@ class _DetailPageState extends State<DetailPage> {
                     color: Colors.grey.shade800),
               ),
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
               // ignore: sized_box_for_whitespace
               Container(
